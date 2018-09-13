@@ -1,0 +1,55 @@
+body{  /*oute auto edo */
+	background-color:black;
+}
+
+#div_table_records{  /*auto to div den xreiazetai idiaitera */
+	
+	
+	border:5px dashed red;
+	border-bottom-color:green;
+	background-color:black;
+	
+	
+}
+
+
+
+table{
+	border:2px solid black;
+	width:100%;
+	
+}
+
+#header{
+	border:1px solid red;
+	font-size:50px;
+	font-family:Papyrus,fantasy;
+	background-color:green;
+}
+
+#subheader1,#subheader2,#subheader3{
+	border:1px solid orange;
+	font-size:30px;
+	color:#66ff33;
+	background-color:#0000ff;
+}
+
+td{
+	border:1px solid orange;
+	font-size:25px;
+	color:black;
+	text-align:center;
+}
+
+tr:nth-child(odd){
+	background-color:#33ccff;
+	
+}
+tr:nth-child(even){
+	background-color:#0099ff;
+}
+
+tr:hover{
+	background-color:#66ff99;
+}
+

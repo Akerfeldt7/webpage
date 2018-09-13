@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+
+<html lang="eng">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="nav_style.css">
+		<link rel="stylesheet" type="text/css" href="universal.css">
+		<link rel="stylesheet" type="text/css" href="news.css">
+		<link href="images/title_icon.png" link rel="shortcut icon" type="image/x-icon">
+		
+		
+		<title>METAL IN MIND</title>
+		<center><img id="logo_image" src="images/logo.png" alt="metal in mind" style="width:810px;height:129px;" >
+		</center>
+	</head>
+	
+	
+	<body>
+	
+	<ul id="nav">
+		<li><a href="index.html">Home</a></li>
+		<li><a class="active" href="news.html">News</a></li>
+		<li><a href="reviews.html">Reviews</a></li>
+		<li><a href="games.html">Games</a></li>
+	</ul>
+	
+	<center>
+		<br>
+		<br>
+		<br>
+		
+		<p style="color:white"> Δεν έχω προσλάβει ακόμα δημοσιογράφους οπότε προβλέπεται να είναι κλειστή αυτή η ενότητα!!</p>
+		<img src="images/troll-face.png" alt="troll face" style="width:300px;height=300px; margin-top:20px;">
+		
+		
+		<h2 style="color:red"> TESTING THINGS!!!!!!!!!!!!!!!!!!!  </h2>
+		
+		
+		<div id="form_div">
+		<form action="process_comment.php" target="comment_frame" method="post">
+			<p style="color:red">Name:<br></p>
+			<input type="text" name="name"> <br>
+			<p style="color:red">Comment:<br></p>
+			<textarea id="textarea_comment" name="comment" placeholder="put your comment here..." rows="6" cols="50"></textarea><br>
+			<input type="submit" value="clear" onclick="eraseText()">
+			<input type="submit" value="submit your comment" onclick="hidden_message()">
+		</form>
+			<div id="thanks_comment">
+				<p>thanks for the comment!!</p>
+			</div>
+		</div>
+		
+		<div id="iframe_div">
+		<iframe id="process_comment" name="comment_frame" src="process_comment.php"> </iframe>
+		</div>
+		
+		
+		
+		
+	</center>
+	</body>
+	
+	<center>
+	<img id="metal_png" onmouseleave="unfilling_color()" onmouseenter="filling_color()" src="images/no_fill.png" alt="metal">
+	</center>
+	
+</html>
+
+<script>
+window.setInterval("reloadIFrame();", 20000);
+
+function reloadIFrame() {
+ //document.frames["comment_frame"].location.reload();
+ iframe=document.getElementById('process_comment');
+ iframe.src=iframe.src;
+}
+
+function eraseText(){
+	document.getElementById("textarea_comment").value="";
+	document.getElementById("thanks_comment").style.display="none";
+}
+
+function hidden_message(){
+	document.getElementById("thanks_comment").style.display="block";
+	
+}
+
+function filling_color(){
+	image=document.getElementById("metal_png");
+	image.src="images/fill.png"
+}
+
+function unfilling_color(){
+	image=document.getElementById("metal_png");
+	image.src="images/no_fill.png"
+}
+</script>

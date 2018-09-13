@@ -1,0 +1,144 @@
+#container{
+    width: 100%;
+	height:500px;
+    border: 1px dotted orange;
+}
+
+
+nav{
+	float:left;
+	max-width:400px;
+	margin:0;
+	padding:20px;
+}
+
+article {
+	color:white;
+    margin-left: 170px;
+    border-left: 1px dashed orange;
+	padding:20px;
+	height:460px;
+    overflow:scroll;
+
+}
+
+article::-webkit-scrollbar { /*to webkit douleuei mono se chrome kai mozilla*/
+	width:0;
+	}
+
+
+
+
+
+
+#reviews_ul{
+	list-style-type:none;
+	/*border:1px solid orange;*/
+	width:350px;
+	height:360px;  /*440*/
+	overflow:scroll;
+	
+}
+
+	/* ALLAZOUME TON Scrollbar tis listas*/
+	#reviews_ul::-webkit-scrollbar {
+		width: 12px;
+	}
+ 
+	/* Track */
+	#reviews_ul::-webkit-scrollbar-track {
+		/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/ 
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+	}
+ 
+	/* Handle */
+	#reviews_ul::-webkit-scrollbar-thumb {
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		background:green;
+		/*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);*/ 
+	}
+	#reviews_ul::-webkit-scrollbar-thumb:window-inactive {
+		background: green; 
+	}
+
+	#reviews_ul::-webkit-scrollbar-corner{
+		background:black; /*gia na min fenetai corner sto mauro fonto mas */
+	}
+
+#reviews_ul li{
+	/*border-bottom:1px solid red;*/
+	margin:10px;
+	color:green;
+}
+
+#reviews_ul li:hover{
+	font-size:110%;
+}
+
+
+#reviews_ul li a{
+	font-family:Papyrus,fantasy;
+	text-decoration:none;
+	color:green;
+	display:block;
+}
+
+#reviews_ul li a:hover{
+	color:orange;
+	text-shadow: 2px 2px 5px red;
+}
+
+#reviews_ul li a.active{
+	color:darkorange;
+	text-shadow: 2px 2px 5px red;
+}
+
+h1{
+	font-family:Papyrus,fantasy;
+	color:Darkred;
+}
+
+h4{
+	font-family:Papyrus,fantasy;
+	color:DarkSalmon ;
+}
+
+
+p{
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:110%;
+	margin:5px;
+}
+
+p img{
+	margin:4px;
+	float:left;
+}
+
+#search_field {
+	/*to background-image den einai kala orismeno */
+    /*background-image: url('./images/searchicon.png'); /* Add a search icon to input */
+    /*background-position: 1px 12px; /* Position the search icon */
+    /*background-repeat: no-repeat; /* Do not repeat the icon image */
+    width:300px; /* */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px double green; /* Add a grey border */
+	background-color:black;
+	color:red;
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+#search_field::-webkit-input-placeholder { 
+    color:lightgreen;
+}
+
+input[type="checkbox"] {
+    /*display:none;*/
+}
+
+
+
+

@@ -1,0 +1,75 @@
+
+
+#videos-container{
+	height:600px;
+	width:1800px;
+	border:5px solid orange;
+	/*border:40px solid transparent;  /*auta ta duo einai gia to border image
+    border-image: url(images/flames-border.jpg) 70 round; */
+	padding: 15px;
+	overflow:auto;
+	display:none;
+}
+
+/* ALLAZOUME TON Scrollbar*/
+#videos-container::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+#videos-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+#videos-container::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+#videos-container::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
+
+
+
+div.video{
+	margin:5px;
+	border:2px solid red;
+	float:left;
+}
+
+.button{
+	background-color:black;
+    border:none;
+    color: red;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	transition-duration: 0.4s;
+}
+
+.button:hover{
+	background-color:red;
+	border-radius:100px;
+	color:darkorange;
+	font-size:150%;
+	
+}
+
+.button:focus /*xoris auto deixnei ena mple border guro apo to koumpi otan to patiseis*/
+{
+	outline:0;
+}
+
+
+
+
+
