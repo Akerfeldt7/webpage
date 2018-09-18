@@ -4,6 +4,7 @@
 <html lang="eng">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="nav_style.css">
 		<link rel="stylesheet" type="text/css" href="universal.css">
 		<link rel="stylesheet" type="text/css" href="games.css">
@@ -28,7 +29,6 @@
 	
 	<h1> Under Construction </h1>
 	
-	<div class="big_forms_div">
 	<form action="insert_game.php" method="post" class="game_form" target="name_display_results">
 		<div class="container">
 			<h1>Insert Game</h1>
@@ -67,7 +67,10 @@
 			</div>
 		</div>
 	</form>
-
+	
+	<div id="id_display_results" class="display_results" style="visibility:hidden;">
+		<iframe id="iframe_insert_results" name="name_display_results" src=""></iframe>
+	</div>
 
 
 	<form action="insert_record.php" method="post" class="record_form" target="name_display_results">
@@ -96,11 +99,7 @@
 		</div>
 	</form>
 
-	<div class="display_results">
-		<iframe id="iframe_insert_results" name="name_display_results" src=""></iframe>
-	</div>
-
-	</div>
+	
 
 	<form action="display_games.php" method="post"  target="name_frame_display">     
 		<input id="test" type="submit" value="TEST" onclick="open_display(document.getElementById('iframe_div_display'))" style="display: none;">
@@ -115,10 +114,10 @@
 			<iframe id="id_iframe_display" name="name_frame_display" src="display_games.php" width="100%" height="700" frameBorder="0"></iframe>
 		</div>
 	
-	<div id="iframe_div_display_records" style="display:none;">
-		<iframe id="id_iframe_display_records" name="name_frame_display_records" src="display_records.php" width="100%" height="700" frameBorder="0"></iframe>
+		<div id="iframe_div_display_records" style="display:none;">
+			<iframe id="id_iframe_display_records" name="name_frame_display_records" src="display_records.php" width="100%" height="700" frameBorder="0"></iframe>
 		
-	</div>
+		</div>
 
 
 
@@ -173,16 +172,14 @@ function click_test(){
 }
 
 function display_insert_results(submit_id){
+	document.getElementById("id_display_results").style.visibility="visible";
 	x=document.getElementById(submit_id);
-
 	if(submit_id=="button_insert_game"){
 		x.src="insert_game.php";
 	}
 	else if(submit_id=="button_insert_record"){
 		x.src="insert_record.php";
 	}
-	
-
 	
 
 }
