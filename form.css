@@ -37,6 +37,8 @@ input[type=text]:focus, input[type=password]:focus {
 	
 }
 
+
+
 ::placeholder{
 	color:#00ff40;
 	
@@ -81,7 +83,7 @@ hr {
 	font-size:25px;
 }
 
-.registerbtn:hover {
+.registerbtn:hover,.loginbtn:hover {
     opacity: 1;
 }
 
