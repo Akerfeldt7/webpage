@@ -13,21 +13,26 @@
 	<br>
 	<br>
 	<?php 
-		
-		$name=$_POST['name'];
-		$comment=$_POST['comment'];
+	
+		$name="";
+		$comment="";
+		if(isset($_POST['submit'])){
+			$name=$_POST['name'];
+			$comment=$_POST['comment'];
+		}
 		$given_name=true;
 		$given_comment=true;
 		
 		
+	
 		if(strcmp($name,"")==0){
 			$given_name=false;
-			/*echo "<p style='color:red'>You did'not give me name man...<br></p>";*/
+			//echo "<p style='color:red'>You did'not give me name man...<br></p>";
 		}
-		
+	
 		if(strcmp($comment,"")==0){
 			$given_comment=false;
-			/*echo "<p style='color:red'>You did'not comment anything man...<br></p>";*/
+			//echo "<p style='color:red'>You did'not comment anything man...<br></p>";
 		}
 		
 		
