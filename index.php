@@ -4,27 +4,14 @@
 <html lang="eng">
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="nav_style.css">
-		<link rel="stylesheet" type="text/css" href="universal.css">
-		<link rel="stylesheet" type="text/css" href="videos.css">
-		<link href="images/title_icon.png" link rel="shortcut icon" type="image/x-icon">
-
 		
-		<title>Metal in Mind</title>
-		<center> <img id="logo_image" src="images/logo.png" alt="metal in mind" style="width:810px;height:129px;" >
-		</center>
-	</head>
-	
-	
-	<body>
-	
-	
-	<ul id="nav" style="margin-bottom:50px;">
-		<li><a class="active" href="index.html">Home</a></li>
-		<li><a href="news.html">News</a></li>
-		<li><a href="reviews.html">Reviews</a></li>
-		<li><a href="games.html">Games</a></li>
-	</ul>
+		<link rel="stylesheet" type="text/css" href="videos.css">
+
+	<?php
+		require('php_scripts/menu.php');
+
+	?>
+		
 	
 	<center>
 	<div style="border:dashed; border-color:red; display:inline-block;">
@@ -103,6 +90,11 @@
 
 
 <script>
+
+
+	document.getElementById("home").className+= " active";
+
+
 	function open_videos(div_id,button_id){
 		x=document.getElementById(div_id).style;
 		if(x.display=='none'||x.display==''){
@@ -125,6 +117,7 @@
 		el.firstChild.data ="Click me to display some awesome metal-videos!!";
 		}
 	}
+
 
 </script>
 	

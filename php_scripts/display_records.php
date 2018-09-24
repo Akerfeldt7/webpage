@@ -1,6 +1,6 @@
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="display_games.css">
+	<link rel="stylesheet" type="text/css" href="../display_games.css">
 	<title>display records</title>
 </head>
 
