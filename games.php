@@ -5,31 +5,21 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="nav_style.css">
-		<link rel="stylesheet" type="text/css" href="universal.css">
 		<link rel="stylesheet" type="text/css" href="games.css">
-		<link href="images/title_icon.png" link rel="shortcut icon" type="image/x-icon">
 		
 		
-		<title>METAL IN MIND</title>
-		<center> <img id="logo_image" src="images/logo.png" alt="metal in mind" style="width:810px;height:129px;" >
-		</center>
-	</head>
 	
 	
-	<body onload="click_test()">
-	
-	<ul id="nav">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="news.html">News</a></li>
-		<li><a href="reviews.html">Reviews</a></li>
-		<li><a class="active" href="games.html">Games</a></li>
-	</ul>
+	<!--<body onload="click_test()"> -->
+	<?php
+		require('php_scripts/menu.php');
+
+	?>
 
 	
 	<h1> Under Construction </h1>
 	
-	<form action="insert_game.php" method="post" class="game_form" target="name_display_results">
+	<form action="php_scripts/insert_game.php" method="post" class="game_form" target="name_display_results">
 		<div class="container">
 			<h1>Insert Game</h1>
 			<p>Please fill in this form to insert a new game.</p>
@@ -73,7 +63,7 @@
 	</div>
 
 
-	<form action="insert_record.php" method="post" class="record_form" target="name_display_results">
+	<form action="php_scripts/insert_record.php" method="post" class="record_form" target="name_display_results">
 		<div class="container">
 			<h1>Insert Record</h1>
 			<p>Please fill in this form to insert your new record for a game.</p>
@@ -101,21 +91,21 @@
 
 	
 
-	<form action="display_games.php" method="post"  target="name_frame_display">     
+	<form action="php_scripts/display_games.php" method="post"  target="name_frame_display">     
 		<input id="test" type="submit" value="TEST" onclick="open_display(document.getElementById('iframe_div_display'))" style="display: none;">
 	</form>
 	
-	<form action="display_records.php" method="post"  target="name_frame_display_records">     
+	<form action="php_scripts/display_records.php" method="post"  target="name_frame_display_records">     
 		<input id="test2" type="submit" value="TEST2" onclick="open_display(document.getElementById('iframe_div_display_records'))" style="display: none;">
 	</form>
 
 	<div class="display_tables">
 		<div id="iframe_div_display" style="display:none;">
-			<iframe id="id_iframe_display" name="name_frame_display" src="display_games.php" width="100%" height="700" frameBorder="0"></iframe>
+			<iframe id="id_iframe_display" name="name_frame_display" src="php_scripts/display_games.php" width="100%" height="700" frameBorder="0"></iframe>
 		</div>
 	
 		<div id="iframe_div_display_records" style="display:none;">
-			<iframe id="id_iframe_display_records" name="name_frame_display_records" src="display_records.php" width="100%" height="700" frameBorder="0"></iframe>
+			<iframe id="id_iframe_display_records" name="name_frame_display_records" src="php_scripts/display_records.php" width="100%" height="700" frameBorder="0"></iframe>
 		
 		</div>
 
@@ -139,6 +129,12 @@
 
 
 <script>
+
+document.getElementById("games").className+= " active";
+
+window.onload=function(){
+	click_test();
+}
 
 function open_insert_game(){ //kleino record an einai anoixto kai anoigo to game
 		if(document.getElementById("iframe_div_insert_record").style.display=="block"){
@@ -175,10 +171,10 @@ function display_insert_results(submit_id){
 	document.getElementById("id_display_results").style.visibility="visible";
 	x=document.getElementById(submit_id);
 	if(submit_id=="button_insert_game"){
-		x.src="insert_game.php";
+		x.src="php_scripts/insert_game.php";
 	}
 	else if(submit_id=="button_insert_record"){
-		x.src="insert_record.php";
+		x.src="php_scripts/insert_record.php";
 	}
 	
 

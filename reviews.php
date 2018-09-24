@@ -4,27 +4,18 @@
 <html lang="eng">
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="nav_style.css">
-		<link rel="stylesheet" type="text/css" href="universal.css">
 		<link rel="stylesheet" type="text/css" href="reviews.css"> <!--css gia tin sugkekrimeni selida mono -->
-		<link href="images/title_icon.png" link rel="shortcut icon" type="image/x-icon">
 		
-		<title>METAL IN MIND</title>
-		<center> <img id="logo_image" src="images/logo.png" alt="metal in mind" style="width:810px;height:129px;" >
-		</center>
-	</head>
 	
 	
-	<body onload="first_open('opeth_sorceress')">
+	<!--<body onload="first_open('opeth_sorceress')"> -->
 	
 	
+	<?php
+		require('php_scripts/menu.php');
+
+	?>
 	
-	<ul id="nav">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="news.html">News</a></li>
-		<li><a class="active" href="reviews.html">Reviews</a></li>
-		<li><a href="games.html">Games</a></li>
-	</ul>
 	
 	<br>
 	<br>
@@ -78,7 +69,7 @@
 	
 	<article> <!-- edo mesa einai ta reviews! se kathe ksexoristo div ena review -->
 		
-		<section id="opeth_sorceress" class="tabcontent">
+		<div id="opeth_sorceress" class="tabcontent">
 			<h1>Opeth-Sorceress</h1>
 			<h4 style="padding-left:10px;">Progressive rock</h4>
 			<p>  <img src="images/opethsorceressfinalcd.jpg" width="300" height="300"> 
@@ -130,9 +121,9 @@
 		And hell, the last record these guys wrote that really had to grow on me was Ghost Reveries, and well, you might know what I think of that one…
 		</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/LhqijfqecvA" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 
-		<section id="testament-brotherhood" class="tabcontent">
+		<div id="testament-brotherhood" class="tabcontent">
 			<h1>Testament-Brotherhood of the snake</h1>
 			<h4 style="padding-left:10px;">Thrash metal</h4>
 			<p> <img src="images/Testament_-_The_Brotherhood_of_the_Snake_2016.jpg" width="300" height="300"> 
@@ -160,9 +151,9 @@
 			καθώς το "Brotherhood Of The Snake" με άνεση κατατροπώνει το "Dystopia" (Megadeth) και τo "For All Kings" (Anthrax), παραμερίζει υπεροπτικά το "Evil Divide" (Death Angel) και κλείνει προκλητικά το μάτι στο "Hard Wired... To Self-Destruct", που ετοιμάζεται να κυκλοφορήσει η μεγαλύτερη metal μπάντα του πλανήτη και κάποτε (και ίσως ακόμα) μεγάλη τους επιρροή, οι Metallica. 
 			</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/OeIgFsU0x4I" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Anciients–Voice of the Void" class="tabcontent">
+		<div id="Anciients–Voice of the Void" class="tabcontent">
 			<h1>Anciients–Voice of the Void </h1>
 			<h4 style="padding-left:10px;">Progressive metal</h4>
 			<p> <img src="images/AnciientsArtwork.jpg" width="300" height="300">
@@ -176,9 +167,9 @@
 				
 			</p>
 			<iframe style="margin-top:20px; margin-left:30px" width="560" height="315" src="https://www.youtube.com/embed/On2ZX_CxGGA?list=RDOn2ZX_CxGGA" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Despised Icon-Beast" class="tabcontent">
+		<div id="Despised Icon-Beast" class="tabcontent">
 			<h1>Despised Icon-Beast </h1>
 			<h4 style="padding-left:10px;">Deathcore</h4>
 			<p> <img src="images/despisediconbeastcd.jpg" width="300" height="300">
@@ -193,9 +184,9 @@ The cinematic orchestration of "Dedicated To Extinction" serves as a sweeping in
 			
 			</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/AECzwseIYwo" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Heaven Shall Burn–Wanderer" class="tabcontent">
+		<div id="Heaven Shall Burn–Wanderer" class="tabcontent">
 			<h1>Heaven Shall Burn–Wanderer </h1>
 			<h4 style="padding-left:10px;">Melodic death metal</h4>
 			<p> <img src="images/Heaven-Shall-Burn-Wanderer-Cover-2016.jpg" width="300" height="300">
@@ -211,9 +202,9 @@ Heaven Shall Burn haven’t reinvented the wheel with Wanderer, nor are they goi
 			<br>Το τραγούδι που ακολουθεί <strong>ΣΠΕΡΝΕΙΙΙΙΙΙΙΙ!!!!!!!</strong>
 			</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/Ed5CqrVS7ok" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Batushka–Litourgiya" class="tabcontent">
+		<div id="Batushka–Litourgiya" class="tabcontent">
 			<h1>Batushka–Litourgiya </h1>
 			<h4 style="padding-left:10px;">Black metal</h4>
 			<p> <img src="images/leitourgeia.jpg" width="300" height="300">
@@ -239,9 +230,9 @@ There’s really not a lot to complain about here. The riffs are memorable and a
 
 			</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/vk4d0mm_jKc?list=RDuZ3DHGutU3w" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Helstar-vampiro" class="tabcontent">
+		<div id="Helstar-vampiro" class="tabcontent">
 			<h1>Helstar-vampiro </h1>
 			<h4 style="padding-left:10px;">Power metal</h4>
 			<p> <img src="images/vampiro.jpg" width="300" height="300">
@@ -254,9 +245,9 @@ This album is chock-full of dark USPM riffing and tasteful neoclassical noodling
 Helstar take no prisoners with their latest outing. A ravenous chiropteran monster, <i>Vampiro</i> pursues and ravages its prey without mercy, thanks to a mix of impeccable, distinctive songwriting, top tier musicianship, and powerful horror aesthetics. Even the modernized sound presentation works in their favour, giving every single note a sharper edge to slice throats with. This is a perfect example of how to update one's style without compromising it; a true return to form. Even <i>This Wicked Nest</i>, despite being clearly superior to lukewarm efforts such as <i>The King of Hell</i> or <i>Glory of Chaos</i>, didn't really sound like a proper Helstar discharge. But this does. And that, people, is worthy of praise and celebration.
 			</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/b3BvOVM9mr4" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Unfathomable Ruination-Finitude" class="tabcontent">
+		<div id="Unfathomable Ruination-Finitude" class="tabcontent">
 			<h1>Unfathomable Ruination-Finitude </h1>
 			<h4 style="padding-left:10px;">Brutal Death metal</h4>
 			<p> <img src="images/finitude.jpg" width="300" height="300">
@@ -267,9 +258,9 @@ I think the main thing that makes Unfathomable Ruination stand out in the crowd 
 Long story short, this rocks like the stone age. Listen to it.
 			</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/SyJgCevYX-U" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Evergrey-The Storm Within" class="tabcontent">
+		<div id="Evergrey-The Storm Within" class="tabcontent">
 			<h1>Evergrey-The Storm Within</h1>
 			<h4 style="padding-left:10px;">Power metal</h4>
 			<p> <img src="images/the_storm_within.jpg" width="300" height="300">
@@ -291,9 +282,9 @@ Long story short, this rocks like the stone age. Listen to it.
 Ίσως να είναι άδικο τελικά να βάζουμε σε σύγκριση αυτό το άλμπουμ με τον προκάτοχό του. Θα είχαμε την ίδια εντύπωση αν δεν είχε προηγηθεί το εκπληκτικό "Hymns"; Πιστεύω πως ναι. Στην ουσία το "The Storm Within" είναι μια ακόμη πολύ καλή δουλειά από τους Evergrey, αλλά για τον γράφοντα βρίσκεται ένα σκαλί πιο κάτω, όχι από τον προκάτοχό του, αλλά από τις δυνατότητες μιας μπάντας που ξεδιπλώθηκαν περίτεχνα δυο χρόνια πριν. Θα αρκεστώ, λοιπόν, στο «πολύ καλό» και θα περιμένω να δω πώς αποτυπώνεται η σκοτεινή ατμόσφαιρα του δίσκου σε live περιβάλλον, ίσως και να αναθεωρήσω.
 			</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/izpMS_QbNwQ" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Slayer-Repentless" class="tabcontent">
+		<div id="Slayer-Repentless" class="tabcontent">
 			<h1>Slayer-Repentless </h1>
 			<h4 style="padding-left:10px;">Thrash metal</h4>
 			<p> <img src="images/slayer-repentless.jpg" width="300" height="300">
@@ -310,9 +301,9 @@ Long story short, this rocks like the stone age. Listen to it.
 				
 			</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/yjb0j9l1sz4" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Sodom-Decision Day" class="tabcontent">
+		<div id="Sodom-Decision Day" class="tabcontent">
 			<h1>Sodom-Decision Day</h1>
 			<h4 style="padding-left:10px;">Thrash metal</h4>
 			<p>  <img src="images/decision_day.jpg" width="300" height="300"> 
@@ -333,9 +324,9 @@ Long story short, this rocks like the stone age. Listen to it.
 			
 			</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/Ov4CoRmmL-w" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Thy Catafalque-Meta" class="tabcontent">
+		<div id="Thy Catafalque-Meta" class="tabcontent">
 			<h1>Thy Catafalque-Meta</h1>
 			<h4 style="padding-left:10px;">Avantgarde black metal</h4>
 			<p>  <img src="images/Thy-Catafalque-Meta.jpg" width="300" height="300">
@@ -351,9 +342,9 @@ Thy Catafalque’s commitment to musical exploration has long produced some of t
 			
 			</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/lPYeteGOUpE" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Mastodon-Leviathan" class="tabcontent">
+		<div id="Mastodon-Leviathan" class="tabcontent">
 			<h1>Mastodon-Leviathan</h1>
 			<h4 style="padding-left:10px;">Sludge metal</h4>
 			<p>  <img src="images/mastodon-leviathan.jpg" width="300" height="300">
@@ -372,9 +363,9 @@ After the relatively more relaxed and melody-driven episode Naked Burn, that can
 That is the end of the line. If you've been a careful listener all hope to regain your senses must now be gone and all you can do is float away and let the dream-like melodies of "Joseph Merrick" carry your drifting remains to a safe place where silence reigns and it's all that matters. Yes, that's exactly the way I feel when I come upon something this great and it unfortunately ends: nothing can match what I've just heard, then I'd rather enjoy the silence.
 			</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/v-Su1YXQYek" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Ulcerate–Shrines of Paralysis" class="tabcontent">
+		<div id="Ulcerate–Shrines of Paralysis" class="tabcontent">
 			<h1>Ulcerate–Shrines of Paralysis</h1>
 			<h4 style="padding-left:10px;">Technical progressive death metal</h4>
 			<p>  <img src="images/ulcerate-shrines-of-paralysis.jpg" width="300" height="300">
@@ -386,9 +377,9 @@ That is the end of the line. If you've been a careful listener all hope to regai
 				In a way, Shrines of Paralysis is nothing more than what is expected; a densely written record that’s both technical and brutal, harrowing yet atmospheric. What we’ve come to expect from Ulcerate is far beyond that of other musicians. In its performances, writing, and scope, Shrines of Paralysis is a cut above, but in emotional impact, it’s paralleled only by the band’s previous work. These albums have rapidly disfigured the face of extreme metal and brought blood back to the surface; they are lofty in ambition and terrifying in scope, and though short of perfection will undoubtedly be seen as classics in the years to come. Whether as a musical statement or philosophical exploration, Shrines of Paralysis is an unqualified success.
 			</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/HtRsND8LNlE" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Wardrum-Awakening" class="tabcontent">
+		<div id="Wardrum-Awakening" class="tabcontent">
 			<h1>Wardrum-Awakening </h1>
 			<h4 style="padding-left:10px;">Power metal</h4>
 			<p> <img src="images/wardrum-awakening.jpg" width="300" height="300">
@@ -396,9 +387,9 @@ That is the end of the line. If you've been a careful listener all hope to regai
 				με φωνή διαμάντι. Τι άλλο να ζητήσει κανείς!!! 
 			</p>
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/eGLXNtByvrY" frameborder="0" allowfullscreen></iframe>
-		</section>
+		</div>
 		
-		<section id="Michael Romeo–War of the Worlds,Pt.1" class="tabcontent">
+		<div id="Michael Romeo–War of the Worlds,Pt.1" class="tabcontent">
 			<h1>Michael Romeo–War of the Worlds,Pt.1</h1>
 			<h4 style="padding-left:10px;">Power metal</h4>
 			<p> <img src="images/Michael Romeo–War of the Worlds,Pt.1.jpg" width="300" height="300">
@@ -436,7 +427,7 @@ That is the end of the line. If you've been a careful listener all hope to regai
 				This guy doesn’t just shred or craft riffs, he composes metal symphonies that one can either admire for their depth or just bang your head to. And to top it all off? 
 				The promo sheet says that War of the Worlds Part 2 is almost ready to go.
 			</p>
-		</section>
+		</div>
 		<!--telos ton reviews-ola ta reviews pane pano apo auto to simeio-->
 	</article>
 	
@@ -462,6 +453,12 @@ That is the end of the line. If you've been a careful listener all hope to regai
 
 
 <script>
+
+document.getElementById("reviews").className+= " active";
+
+window.onload=function(){
+	first_open('opeth_sorceress');
+}
 
 function first_open(album){
 	

@@ -22,7 +22,8 @@
 		}
 		$given_name=true;
 		$given_comment=true;
-		
+	
+	
 		
 	
 		if(strcmp($name,"")==0){
@@ -44,7 +45,7 @@
 		//MESA SE AUTO TO IF GRAFOUME TO ONOMA KAI TO COMMENT TOU XRISTI STO ARXEIO MAS
 		if($given_name==true && $given_comment==true){
 			/*anoigma arxeiou */
-			@ $fp=fopen("./comments/comments.txt",'ab'); //to papaki einai gia na min emfanisei to lathos i php afou tha to xeiristo ego me to if
+			@ $fp=fopen("../comments/comments.txt",'ab'); //to papaki einai gia na min emfanisei to lathos i php afou tha to xeiristo ego me to if
 			if(!$fp){
 				echo "<p style='color:red'><strong>Your comment could not be processed at this time.<br>Please try again later.</strong></p></body></html>";
 				exit;
@@ -64,7 +65,7 @@
 		
 		/*grapsimo tou arxeiou stin selida */
 		/*prota prepei na to anoiksoume pali omos */
-		@ $fp=fopen("./comments/comments.txt",'rb'); //to papaki einai gia na min emfanisei to lathos i php afou tha to xeiristo ego me to if
+		@ $fp=fopen("../comments/comments.txt",'rb'); //to papaki einai gia na min emfanisei to lathos i php afou tha to xeiristo ego me to if
 		if(!$fp){
 			echo "<p style='color:red'><strong>Your comments could not be processed at this time.<br>Please try again later.</strong></p></body></html>";
 			exit;

@@ -12,7 +12,7 @@
 <?php 
 /*grapsimo tou arxeiou stin selida */
 		/*prota prepei na to anoiksoume pali omos */
-		@ $fp=fopen("./comments/comments.txt",'rb'); //to papaki einai gia na min emfanisei to lathos i php afou tha to xeiristo ego me to if
+		@ $fp=fopen("../comments/comments.txt",'rb'); //to papaki einai gia na min emfanisei to lathos i php afou tha to xeiristo ego me to if
 		if(!$fp){
 			echo "<p style='color:red'><strong>Your comments could not be processed at this time.<br>Please try again later.</strong></p></body></html>";
 			exit;

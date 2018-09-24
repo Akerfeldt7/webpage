@@ -4,26 +4,13 @@
 <html lang="eng">
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="nav_style.css">
-		<link rel="stylesheet" type="text/css" href="universal.css">
 		<link rel="stylesheet" type="text/css" href="news.css">
-		<link href="images/title_icon.png" link rel="shortcut icon" type="image/x-icon">
 		
 		
-		<title>METAL IN MIND</title>
-		<center><img id="logo_image" src="images/logo.png" alt="metal in mind" style="width:810px;height:129px;" >
-		</center>
-	</head>
-	
-	
-	<body>
-	
-	<ul id="nav">
-		<li><a href="index.html">Home</a></li>
-		<li><a class="active" href="news.html">News</a></li>
-		<li><a href="reviews.html">Reviews</a></li>
-		<li><a href="games.html">Games</a></li>
-	</ul>
+		<?php
+			require('php_scripts/menu.php');
+
+		?>
 	
 	<center>
 		<br>
@@ -36,13 +23,13 @@
 		
 		
 		<div id="form_div">
-		<form action="process_comment.php" target="comment_frame" method="post">
+		<form action="php_scripts/process_comment.php" target="comment_frame" method="post">
 			<p style="color:red">Name:<br></p>
 			<input type="text" name="name"> <br>
 			<p style="color:red">Comment:<br></p>
 			<textarea id="textarea_comment" name="comment" placeholder="put your comment here..." rows="6" cols="50"></textarea><br>
-			<button type="button" onclick="eraseText()">clear</button>
-			<input type="submit" value="submit your comment" onclick="hidden_message()" name="submit">
+			<button type="submit" onclick="eraseText()">clear</button>
+			<input type="submit" onclick="hidden_message()" name="submit" value="submit your comment">
 		</form>
 			<div id="thanks_comment">
 				<p>thanks for the comment!!</p>
@@ -50,7 +37,7 @@
 		</div>
 		
 		<div id="iframe_div">
-		<iframe id="process_comment" name="comment_frame" src="process_comment.php"> </iframe>
+		<iframe id="process_comment" name="comment_frame" src="php_scripts/process_comment.php"> </iframe>
 		</div>
 		
 		
@@ -66,7 +53,10 @@
 </html>
 
 <script>
+
 window.setInterval("reloadIFrame();", 20000);
+
+document.getElementById("news").className+= " active";
 
 function reloadIFrame() {
  //document.frames["comment_frame"].location.reload();
