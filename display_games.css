@@ -1,22 +1,10 @@
-body{  /*oute auto edo */
-	background-color:black;
-}
-
-#div_table_records{  /*auto to div den xreiazetai idiaitera */
-	
-	
-	border:5px dashed red;
-	border-bottom-color:green;
-	background-color:black;
-	
-	
-}
 
 
 
 table{
 	border:2px solid black;
 	width:100%;
+	margin:20px;
 	
 }
 

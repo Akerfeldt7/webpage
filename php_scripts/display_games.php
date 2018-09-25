@@ -1,11 +1,4 @@
 
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="../display_games.css">
-	<title>display games</title>
-</head>
-<body>
-
 <?php
 
 	//sundesi me to Database
@@ -22,7 +15,6 @@
 		exit;
 	}
 	
-	echo "<div id='div_table_records'>";
 		echo "<table>
 			<tr>
 				<th id='header' colspan='3'>GAMES</th>
@@ -40,7 +32,6 @@
 			echo "</tr>";
 		}
 		echo "</table>";
-	echo "</div>";
 			
 		
 				
@@ -52,6 +43,3 @@
 
 ?>
 
-
-</body>
-</html>

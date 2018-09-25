@@ -1,10 +1,3 @@
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="../display_games.css">
-	<title>display records</title>
-</head>
-
-<body>
 
 <?php
 
@@ -22,7 +15,6 @@
 		exit;
 	}
 	
-	echo "<div id='div_table_records'>";
 		echo "<table>
 			<tr>
 				<th id='header' colspan='3'>RECORDS</th>
@@ -40,7 +32,6 @@
 			echo "</tr>";
 		}
 		echo "</table>";
-	echo "</div>";
 			
 		
 				
@@ -53,6 +44,3 @@
 
 ?>
 
-
-</body>
-</html>

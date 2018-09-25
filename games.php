@@ -5,12 +5,69 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="display_games.css">
 		<link rel="stylesheet" type="text/css" href="games.css">
-		
+		<!--cdn for jQuerry -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!----------------------------------------------------------------------->
+
+		<script>
+			//jQuery here
+			$(document).ready(function(){
+				$("#display_games").load("php_scripts/display_games.php");
+				$("#display_records").load("php_scripts/display_records.php");
+
+				$("#form_insert_game").submit(function(event){
+					event.preventDefault();
+					var username_game=$("#id_insert_game_username_game").val();
+					var name=$("#id_insert_game_name").val();
+					var genre=$("#id_insert_game_genre").val();
+					var price=$("#id_insert_game_price").val();
+					var kind=$("#id_insert_game_kind").val();
+					var submit=$("#button_insert_game").val();
+					$("#display_results_insert_game").load("php_scripts/insert_game.php", {
+						username_game: username_game,
+						name: name,
+						genre: genre,
+						price: price,
+						kind: kind,
+						submit: submit
+					});
+
+					setTimeout(function(){
+						$("#display_games").load("php_scripts/display_games.php");
+					},2000);
+
+				});
+
+				$("#form_insert_record").submit(function(event){
+					event.preventDefault();
+					var username=$("#id_insert_record_username").val();
+					var game=$("#id_insert_record_game").val();
+					var record=$("#id_insert_record_record").val();
+					var submit=$("#button_insert_record").val();
+					$("#display_results_insert_record").load("php_scripts/insert_record.php", {
+						username: username,
+						game: game,
+						record: record,
+						submit: submit
+					});
+
+					setTimeout(function(){
+						$("#display_records").load("php_scripts/display_records.php");
+					},2000);
+
+
+				});
+
+			});
+
+			
+			
+		</script>
 		
 	
-	
-	<!--<body onload="click_test()"> -->
+	 
 	<?php
 		require('php_scripts/menu.php');
 
@@ -19,110 +76,94 @@
 	
 	<h1> Under Construction </h1>
 	
-	<form action="php_scripts/insert_game.php" method="post" class="game_form" target="name_display_results">
+	<form id="form_insert_game" action="php_scripts/insert_game.php" method="post" class="game_form">
 		<div class="container">
 			<h1>Insert Game</h1>
 			<p>Please fill in this form to insert a new game.</p>
 			<hr>
 			<div>
 				<label for="username_game"><b>Username:</b></label>
-				<input type="text" name="username_game" maxlength="30" required>
+				<input id="id_insert_game_username_game" type="text" name="username_game" maxlength="30" required>
 			</div>
 
 			<div>
 				<label for="name"><b>Game:</b></label>
-				<input type="text" name="name" maxlength="30" required>
+				<input id="id_insert_game_name" type="text" name="name" maxlength="30" required>
 			</div>
 
 			<div>
 				<label for="genre"><b>Genre:</b></label>
-				<input type="text" name="genre" maxlength="30" required>
+				<input id="id_insert_game_genre" type="text" name="genre" maxlength="30" required>
 			</div>
 
 			<div>
 				<label for="price"><b>Price:</b></label>
-				<input type="text" name="price" maxlength="7" required>
+				<input id="id_insert_game_price" type="text" name="price" maxlength="7" required>
 			</div>
 
 			<div>
 				<label for="kind"><b>Kind:</b></label>	
-				<select name="kind" required>
+				<select id="id_insert_game_kind" name="kind" required>
 					<option value="video game">video game</option>
 					<option value="board game">board game</option>
 				</select>
 				</div>
 
 			<div>
-				<button id="button_insert_game" type="submit" onclick="display_insert_results(this.id)">Add the game</button>
+				<button id="button_insert_game" type="submit" name="submit">Add the game</button>
 			</div>
+			<p id="display_results_insert_game"></p>
+
 		</div>
 	</form>
-	
-	<div id="id_display_results" class="display_results" style="visibility:hidden;">
-		<iframe id="iframe_insert_results" name="name_display_results" src=""></iframe>
-	</div>
 
 
-	<form action="php_scripts/insert_record.php" method="post" class="record_form" target="name_display_results">
+	<form id="form_insert_record" action="php_scripts/insert_record.php" method="post" class="record_form">
 		<div class="container">
 			<h1>Insert Record</h1>
 			<p>Please fill in this form to insert your new record for a game.</p>
 			<hr>
 			<div>
 				<label for="username"><b>Username:</b></label>
-				<input type="text" name="username" maxlength="30" required>
+				<input id="id_insert_record_username" type="text" name="username" maxlength="30" required>
 			</div>
 
 			<div>
 				<label for="game"><b>Game:</b></label>
-				<input type="text" name="game" maxlength="30" required>
+				<input id="id_insert_record_game" type="text" name="game" maxlength="30" required>
 			</div>
 
 			<div>
 				<label for="record"><b>Record:</b></label>
-				<input type="text" name="record" maxlength="30" required>
+				<input id="id_insert_record_record" type="text" name="record" maxlength="30" required>
 			</div>
 
 			<div>
-				<button id="button_insert_record" type="submit" onclick="display_insert_results(this.id)">Add the record</button>
+				<button id="button_insert_record" type="submit" name="submit">Add the record</button>
 			</div>
+			<p id="display_results_insert_record"></p>
 		</div>
 	</form>
 
 	
+<section id="game_tables">
+	<div id="display_games">
 
-	<form action="php_scripts/display_games.php" method="post"  target="name_frame_display">     
-		<input id="test" type="submit" value="TEST" onclick="open_display(document.getElementById('iframe_div_display'))" style="display: none;">
-	</form>
-	
-	<form action="php_scripts/display_records.php" method="post"  target="name_frame_display_records">     
-		<input id="test2" type="submit" value="TEST2" onclick="open_display(document.getElementById('iframe_div_display_records'))" style="display: none;">
-	</form>
-
-	<div class="display_tables">
-		<div id="iframe_div_display" style="display:none;">
-			<iframe id="id_iframe_display" name="name_frame_display" src="php_scripts/display_games.php" width="100%" height="700" frameBorder="0"></iframe>
-		</div>
-	
-		<div id="iframe_div_display_records" style="display:none;">
-			<iframe id="id_iframe_display_records" name="name_frame_display_records" src="php_scripts/display_records.php" width="100%" height="700" frameBorder="0"></iframe>
+	<!--emfanizetai o Jquery kodikas apo pano -->
 		
-		</div>
-
-
-
 	</div>
 
-	
-	
-	
+	<div id="display_records">
+		
+	</div>
+</section>	
 
 	
 	
 	
 	
 	
-	</body>
+</body>
 	
 	
 </html>
@@ -132,53 +173,8 @@
 
 document.getElementById("games").className+= " active";
 
-window.onload=function(){
-	click_test();
-}
 
-function open_insert_game(){ //kleino record an einai anoixto kai anoigo to game
-		if(document.getElementById("iframe_div_insert_record").style.display=="block"){
-			document.getElementById("iframe_div_insert_record").style.display="none"
-		}
-		document.getElementById("iframe_div_insert_game").style.display="block";
-}
 
-function open_insert_record(){ //kleino game an einai anoixto kai anoigo to record
-		if(document.getElementById("iframe_div_insert_game").style.display=="block"){
-			document.getElementById("iframe_div_insert_game").style.display="none"
-		}
-		document.getElementById("iframe_div_insert_record").style.display="block";
-}
-
-function open_display(id){
-	id.style.display="block";
-
-}
-
-function close_div(div_id){
-	if(document.getElementById(div_id).style.display=="block"){
-		document.getElementById(div_id).style.display="none";
-	}
-	
-}
-
-function click_test(){
-	document.getElementById("test").click();
-	document.getElementById("test2").click();
-}
-
-function display_insert_results(submit_id){
-	document.getElementById("id_display_results").style.visibility="visible";
-	x=document.getElementById(submit_id);
-	if(submit_id=="button_insert_game"){
-		x.src="php_scripts/insert_game.php";
-	}
-	else if(submit_id=="button_insert_record"){
-		x.src="php_scripts/insert_record.php";
-	}
-	
-
-}
 
 
 </script>

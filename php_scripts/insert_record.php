@@ -1,22 +1,22 @@
-<html>
-<head>
-	<title>RECORD ENTRY RESULTS</title>
-</head>
-<body>
-<h1>RECORD ENTRY RESULTS</h1>
-
 
 <?php
 
 	//dhmiourgia metabliton
 	$recordId="";
-	$name=$_POST['username'];
-	$game=$_POST['game'];
-	$record=$_POST['record'];
+	$name="";
+	$game="";
+	$record="";
+
+	if (isset($_POST['submit'])){
+		//dhmiourgia metabliton
+		$name=$_POST['username'];
+		$game=$_POST['game'];
+		$record=$_POST['record'];
+	}	
 	
 	//elegxos ean exoun dothei oles oi plirofories
 	if(!$name||!$game||!$record){
-		echo "You have not entered all the required details for entering the record of the game in the base.<br />"
+		echo "You have not typed all the required details for entering the record of the game in the base.<br />"
 			 ."Please go back and try again.";
 		exit;
 	}
@@ -35,14 +35,19 @@
 	$db=db_connect(); //h sunartisi auti einai mesa sto arxeio connect_database.php
 	
 	//prota prepei na elegxo an to username tou user anistoixi se kapoio xristi tis basis
-	//prepare statement and bind for avoid sql injection
+	//prepare statement and bind to avoid sql injection
 	$query=$db->prepare("SELECT count(name) from user where name=?");
 	$query->bind_param("s",$name);
 	$query->execute();
 	$result=$query->get_result();
 	$row=$result->fetch_row();
 	if($row[0]!=1){
-		echo "Sorry the name that you enter does not exists in our database.";
+		echo "Sorry the name that you typed does not exists in our database.";
+		echo "
+		<script>
+			$('#id_insert_record_username').val('');
+		</script>
+		";
 		exit;
 	}
 	$query->free_result();
@@ -54,7 +59,12 @@
 	$result=$query->get_result();
 	$row=$result->fetch_row();
 	if($row[0]!=1){
-		echo "Sorry the game that you enter does not exists in our database.";
+		echo "Sorry the game that you typed does not exists in our database.";
+		echo "
+		<script>
+			$('#id_insert_record_game').val('');
+		</script>
+		";
 		exit;
 	}
 	$query->free_result();
@@ -92,7 +102,7 @@
 	$result=$query->get_result();
 	$row=$result->fetch_assoc();
 	if($row["count(record)"]==1){ //ean to neo record einai mikrotero
-		echo $name." the record ".$record." you enter for ".$game." is smaller than your previous one-->".$row["record"];
+		echo $name." the record ".$record." you typed for ".$game." is smaller than your previous one-->".$row["record"];
 	}
 	else{ //topothetoume to neo record
 		$query->free_result();
@@ -117,8 +127,11 @@
 
 ?>
 
+<script>
+	$("#id_insert_record_username").val("");
+	$("#id_insert_record_game").val("");
+	$("#id_insert_record_record").val("");
+</script>
+
 
 	
-</body>
-	
-</html>

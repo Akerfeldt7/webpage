@@ -6,27 +6,13 @@
 }
 
 
-
-
-
-
-.game_form,.record_form{
-	margin-top: 50px;
-	margin-right: 10px;
-	margin-left: 10px;
-}
-
-
-
-
-
-
 .container{
 	background-color: black;
 	border: dashed 1px blue;
 	padding: 10px;
 	width:30%;
-	height: 600px;
+	/*height: 600px;*/
+	height: auto;
 	float: left;
 	margin:10px;	
 }
@@ -110,6 +96,21 @@
 	
 }
 
+.container p{
+	text-align: center;
+	font-size: 20px;
+}
+
+
+#game_tables{  /*auto to div den xreiazetai idiaitera */
+	margin:50px 100px 50px 100px;
+	padding:20px;
+	/*border:5px dashed red;
+	border-bottom-color:green;
+	*/
+	clear: left;
+}
+
 
 
 .display_results{
@@ -128,22 +129,20 @@
 	border: none;
 }
 
-.display_tables{
-	clear:left;
-	margin: 20px;
-	width: 95%;
-	height:600px;
-	border: 1px solid green;
-	background-color: orange;
-	
-}
+
 
 /* Use a media query to add a break point at 800px: */
-@media screen and (max-width:800px) {
-  .container, .display_results iframe{
-  	clear:left;
-  	width:100%;
-  }
+@media screen and (max-width:1300px) {
+	.container, .display_results iframe{
+		clear:left;
+		width:60%;
+	}
+
+
+	.display_results{
+		clear: left;
+	}
+  
 }
 
 
